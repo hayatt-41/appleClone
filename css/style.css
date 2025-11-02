@@ -1,0 +1,401 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 50px; 
+}
+
+header {
+    background-color: white;
+    z-index: 1000;
+}
+
+
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1001;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 50px; */
+    padding: 20px 140px;
+
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+header nav ul li a i {
+    color: black;
+}
+
+header p {
+    text-align: center;
+    padding: 10px 0 20px;
+    font-size: 14px;
+}
+
+header p a {
+    text-decoration: none;
+    color: #0071E3;
+}
+
+header p a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    border: 1px solid #0071E3;
+    border-radius: 50px;
+    padding: 7px 18px;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.learn-more {
+    background: #0071E3;
+    color: white;
+}
+
+button.buy {
+    background-color: white;
+    color: #0071E3;
+}
+button.ultra{
+    background-color: black;
+}
+
+button.buy:hover {
+    background-color: #0071E3;
+    color: white;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+.se3{
+    margin-top: 300px;
+}
+.ultra3{
+    color: white;
+}
+.content {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.allout{
+    margin-right: 100px;
+}
+
+
+.hero-section {
+    position: relative;
+    height: 70vh;
+    margin-bottom: 30px;
+}
+
+.hero-section.large {
+    height: 90vh;
+}
+
+.hero-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section-1 .content {
+    color: white;
+}
+
+.hero-section-1 .content p {
+    margin-left: 95px;
+}
+
+.hero-section-2 .content p {
+    margin-left: -40px;
+}
+
+.hero-section-3 .content p {
+    margin-left: -40px;
+}
+
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.grid-item {
+    position: relative;
+    height: 80vh;
+}
+
+.grid-item img.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item .content {
+    font-size: 17px;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.grid-item .content img {
+    width: 60%;
+    height: auto;
+}
+
+.grid-item .overlay {
+    top: 10%;
+}
+
+
+.slideshow {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(100vw * 5);
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    height: 100%;
+    width: 100vw;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.dots {
+    margin: 20px 0 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    display: none;
+}
+
+.dot-label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(66, 65, 67, 0.7);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot:checked + .dot-label {
+    background: rgb(21, 21, 21);
+}
+
+#dot1:checked ~ .slide-track {
+    transform: translateX(-100vw);
+}
+
+#dot2:checked ~ .slide-track {
+    transform: translateX(-200vw);
+}
+
+#dot3:checked ~ .slide-track {
+    transform: translateX(-300vw);
+}
+
+
+#dot4:checked ~ .slide-track {
+    transform: translateX(-400vw);
+}
+
+#dot5:checked ~ .slide-track {
+    transform: translateX(-500vw);
+}
+
+#dot6:checked ~ .slide-track {
+    transform: translateX(-600vw);
+}
+#dot7:checked ~ .slide-track {
+    transform: translateX(-700vw);
+}
+
+
+#dot8:checked ~ .slide-track {
+    transform: translateX(0vw);
+}
+
+#dot9:checked ~ .slide-track {
+    transform: translateX(100vw);
+}
+
+#dot10:checked ~ .slide-track {
+    transform: translateX(200vw);
+}
+
+
+.logo-marquee {
+    overflow: hidden;
+    background: #f5f5f7;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 10px;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-track img {
+    height: 200px;
+    object-fit: contain;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+.footer-section {
+    background-color: #f1efef;
+}
+
+.terms {
+    padding: 0px 140px;
+    margin-bottom: 0;
+}
+
+.terms p {
+    color: grey;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid rgb(220, 213, 213);
+    margin: 20px 140px;
+}
+
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px 140px;
+    margin-bottom: 0;
+    gap: 30px;
+}
+
+.footer-nav div ul {
+    list-style: none;
+}
+
+.footer-nav div ul li a {
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+    line-height: 2.5;
+    
+}
+
+.footer-nav div h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+.lastp {
+    /* text-align: center; */
+    padding: 0px 140px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.lastp a{
+    color: #0071E3;
+}
+
+footer {
+    display: flex;
+    /* justify-content: center; */
+    gap: 20px;
+    padding: 0px 140px;
+    font-size: 12px;
+    margin-bottom: 0;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: black;
+    padding: 10px;
+    
+}
+.lastanchor{
+    margin-left: 120px;
+}
+
+footer p {
+    margin-bottom: 20px;
+}

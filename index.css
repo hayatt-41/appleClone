@@ -1,0 +1,23 @@
+.logo-marquee {
+    overflow: hidden;
+    background: #f5f5f7;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 10px;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-track img {
+    height: 200px;
+    object-fit: contain;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
